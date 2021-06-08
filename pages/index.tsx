@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container } from 'react-grid-system';
+import { Container } from '@chakra-ui/react';
 import DdlForm from '../components/DdlForm';
 
 export default function Home() {
   return (
-    <Container>
+    <Container maxW="container.lg">
       <DdlForm />
     </Container>
   );
