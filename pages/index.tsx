@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 
 export default function Home() {
@@ -6,12 +6,12 @@ export default function Home() {
     <Container>
       <Row>
         <Col sm={6}>
-      aaa
-      </Col>
+          aaa
+        </Col>
         <Col sm={6}>
-      aaa
-      </Col>
+          aaa
+        </Col>
       </Row>
     </Container>
-  )
+  );
 }
