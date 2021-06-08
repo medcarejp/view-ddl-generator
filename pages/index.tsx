@@ -1,17 +1,11 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-grid-system';
+import { Container } from 'react-grid-system';
+import DdlForm from '../components/DdlForm';
 
 export default function Home() {
   return (
     <Container>
-      <Row>
-        <Col sm={6}>
-          aaa
-        </Col>
-        <Col sm={6}>
-          aaa
-        </Col>
-      </Row>
+      <DdlForm />
     </Container>
   );
 }
