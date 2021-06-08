@@ -1,15 +1,21 @@
 import React from 'react';
-import { Row, Col } from 'react-grid-system';
+import {
+  SimpleGrid, Heading, FormControl, FormLabel, Input,
+} from '@chakra-ui/react';
 
 const Component = () => (
-  <Row>
-    <Col sm={6}>
-      <h2>Table Information Import From</h2>
-    </Col>
-    <Col sm={6}>
-      <h2>DDL for Make View Table</h2>
-    </Col>
-  </Row>
+  <SimpleGrid columns={2} spacing={10}>
+    <div>
+      <Heading as="h2">Table Information Import From</Heading>
+      <FormControl id="TableName">
+        <FormLabel>TableName</FormLabel>
+        <Input />
+      </FormControl>
+    </div>
+    <div>
+      <Heading as="h2">DDL for Make View Table</Heading>
+    </div>
+  </SimpleGrid>
 );
 
 export default Component;
