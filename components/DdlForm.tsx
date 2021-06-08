@@ -19,13 +19,13 @@ const Component = () => {
 
   return (
     <SimpleGrid columns={2} spacing={10}>
-      <Box shadow="md" p={5} borderRadius="md">
+      <Box shadow="md" p={5} borderRadius="md" my={4}>
         <Heading fontSize="xl">Table Information Import From</Heading>
-        <FormControl id="TableName">
+        <FormControl id="TableName" my={4}>
           <FormLabel>TableName</FormLabel>
           <Input onChange={(ev) => setTableName(ev.target.value)} />
         </FormControl>
-        <FormControl id="Columns">
+        <FormControl id="Columns" my={4}>
           <FormLabel>Columns</FormLabel>
           <Textarea onChange={(ev) => {
             setColumns(ev.target.value.split('\n').filter((v) => v && v.length > 0));
@@ -33,9 +33,9 @@ const Component = () => {
           />
         </FormControl>
       </Box>
-      <Box shadow="md" p={5} borderRadius="md">
+      <Box shadow="md" p={5} borderRadius="md" my={4}>
         <Heading fontSize="xl">DDL for Make View Table</Heading>
-        <FormControl id="Ddl">
+        <FormControl id="Ddl" my={4}>
           <FormLabel>Ddl</FormLabel>
           <Textarea value={ddl} readOnly rows={20} />
         </FormControl>
