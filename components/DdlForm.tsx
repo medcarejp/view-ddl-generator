@@ -12,9 +12,11 @@ const Component = () => {
     if (!tableName) return;
     if (columns.length === 0) return;
 
-    setDdl(`create view v_${tableName} as
-  select ${columns.join(',\n')}
- from medically.${tableName};`);
+    setDdl(`drop view if exists v_${tableName};
+create view v_${tableName} as
+select
+  ${columns.join(',\n  ')}
+from medically.${tableName};`);
   }, [tableName, columns]);
 
   return (
