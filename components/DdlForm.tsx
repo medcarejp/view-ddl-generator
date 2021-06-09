@@ -12,8 +12,7 @@ const Component = () => {
     if (!tableName) return;
     if (columns.length === 0) return;
 
-    setDdl(`drop view if exists v_${tableName};
-create view v_${tableName} as
+    setDdl(`create or replace view v_users as
 select
   ${columns.join(',\n  ')}
 from medically.${tableName};`);
