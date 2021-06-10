@@ -12,7 +12,7 @@ const Component = () => {
     if (!tableName) return;
     if (columns.length === 0) return;
 
-    setDdl(`create or replace view v_users as
+    setDdl(`create or replace view v_${tableName} as
 select
   ${columns.join(',\n  ')}
 from medically.${tableName};`);
