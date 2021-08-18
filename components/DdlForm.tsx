@@ -29,7 +29,11 @@ from medically.${tableName};`);
         <FormControl id="Columns" my={4}>
           <FormLabel>Columns</FormLabel>
           <Textarea onChange={(ev) => {
-            setColumns(ev.target.value.split('\n').filter((v) => v && v.length > 0));
+            let candidateColumns = ev.target.value.split('\n');
+            if (!candidateColumns.some((c) => c === 'id')) {
+              candidateColumns = ['id', ...candidateColumns];
+            }
+            setColumns(candidateColumns.filter((v) => v && v.length > 0));
           }}
           />
         </FormControl>
